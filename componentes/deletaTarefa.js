@@ -1,21 +1,32 @@
+const BotaoDeleta = () => {
+    const botaoDeleta = document.createElement('button');
 
-const BotaoDeleta = () =>{
-    const botaoDeleta = document.createElement('button')
+    botaoDeleta.classList.add('check-button');
+    botaoDeleta.innerText = 'deletar';
+    botaoDeleta.addEventListener('click', deletarTarefa);
 
-    botaoDeleta.classList.add('check-button')
-    botaoDeleta.innerText = 'deletar'
-    botaoDeleta.addEventListener('click', deletarTarefa)
+    return botaoDeleta;
+};
 
-    return botaoDeleta
-}
+const deletarTarefa = (evento) => {
+    const botaoDeleta = evento.target;
 
-const deletarTarefa = (evento) =>{
-    const botaoDeleta = evento.target
-    
-    const tarefaCompleta = botaoDeleta.parentElement
-    tarefaCompleta.remove()
+    const tarefaCompleta = botaoDeleta.parentElement;
+    const valorTarefa = tarefaCompleta.querySelector('.content').textContent;
 
-    return botaoDeleta
-}
+    tarefaCompleta.remove();
 
-export default BotaoDeleta
+    removerDoLocalStorage(valorTarefa);
+
+    return botaoDeleta;
+};
+
+const removerDoLocalStorage = (valorTarefa) => {
+    const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas'));
+
+    const tarefasAtualizadas = tarefasSalvas.filter(tarefa => tarefa.valor !== valorTarefa);
+
+    localStorage.setItem('tarefas', JSON.stringify(tarefasAtualizadas));
+};
+
+export default BotaoDeleta;
