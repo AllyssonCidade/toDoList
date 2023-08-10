@@ -1,51 +1,62 @@
-@media screen and (max-width: 550px){
-    .app{
-        margin: 0 auto;
-        width: 100vw;
-        overflow: hidden;
-    }
-    .todo-list{
-        width: 90vw;
-        background-color: rgba(202, 190, 190, 0.438);
-        overflow: auto;
-        max-width: 90vw;
-        min-width: 0;
-      }
-      .task button{
-        width: 50px;
-      }
-      .content {
-        overflow-wrap:break-word;
-        width: 50px;
-      }
-      .form-button {
-        font-size: .7rem;
-      }
+@media screen and (max-width: 550px) {
+  .app {
+    margin: 0 auto;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .todo-list {
+    width: 80vw;
+    background-color: rgba(202, 190, 190, 0.438);
+    overflow: auto;
+    height: 60vh;
+  }
+
+  .task button {
+    width: 50px;
+  }
+
+  .content {
+    overflow-wrap: break-word;
+    width: 50px;
+  }
+
+  .form-button {
+    font-size: .7rem;
+  }
 }
 
-@media screen and (max-width: 320px){
-    .task{
-        gap: 5px;
-        padding: 0;
-        padding-right: 3px;
-        font-size: .9rem;
-        overflow: auto;
-    }
-    .todo-list{
-        padding-bottom: 0;
-        padding: .5rem;
-        width: 90vw;
-        max-width: 90vw;
-        margin: 0;
-    }
-    .content {
-        margin: 0;
-        flex-grow: 9;
-        height: 100px;
-        overflow-wrap:break-word;
-      }
-      .list{
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
+@media screen and (max-width: 320px) {
+  .task {
+    gap: 5px;
+    padding: 0;
+    padding-right: 3px;
+    font-size: .9rem;
+    overflow: auto;
+  }
+
+  .todo-list {
+    padding-bottom: 0;
+    padding: .5rem;
+    width: 90vw;
+    height: 60vh;
+    margin: 0;
+  }
+
+  .content {
+    margin: 0;
+    flex-grow: 9;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+
+  .list {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .check-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
