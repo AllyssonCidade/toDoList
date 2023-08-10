@@ -6,12 +6,12 @@ const criarTarefa = (evento) => {
     const lista = document.querySelector('[data-list]')
     const input = document.querySelector('[data-form-input')
     const valor = input.value
-    
+
     const tarefa = document.createElement('li')
     tarefa.classList.add('task')
     const conteudo = `<p class="content">${valor}</p>`
-   
- const tarefaPronta = {
+
+    const tarefaPronta = {
         "valor": valor,
         "clase": tarefa.className,
     }
@@ -34,8 +34,8 @@ const criarTarefa = (evento) => {
 const carregarTarefasSalvas = () => {
     const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas'));
     const lista = document.querySelector('[data-list]');
-   
-    tarefasSalvas.forEach(tarefaSalva => { 
+
+    tarefasSalvas.forEach(tarefaSalva => {
         const tarefa = document.createElement('li');
         tarefa.className = tarefaSalva.clase
         const conteudo = `<p class="content">${tarefaSalva.valor}</p>`
@@ -43,15 +43,13 @@ const carregarTarefasSalvas = () => {
         tarefa.appendChild(BotaoConclui())
         tarefa.appendChild(BotaoDeleta())
         lista.appendChild(tarefa)
-        
+
     });
 
 }
 
-
-
 const novaTarefa = document.querySelector('[data-form-button]');
 
-novaTarefa.addEventListener('click', criarTarefa )
+novaTarefa.addEventListener('click', criarTarefa)
 
 document.addEventListener('DOMContentLoaded', carregarTarefasSalvas);
