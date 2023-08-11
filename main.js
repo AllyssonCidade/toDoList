@@ -23,7 +23,7 @@ const criarTarefa = (evento) => {
         tarefa.appendChild(BotaoDeleta())
         lista.appendChild(tarefa)
         input.value = ""
-        const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas'));
+        const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
         tarefasSalvas.push(tarefaPronta)
 
         localStorage.setItem("tarefas", JSON.stringify(tarefasSalvas));
