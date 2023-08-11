@@ -19,6 +19,8 @@
     padding-right: 3px;
     font-size: .9rem;
     overflow: auto;
+    padding-top:5px;
+    padding-bottom:5px;
   }
 
   .task button {
@@ -44,6 +46,8 @@
       padding-right: 3px;
       font-size: .9rem;
       overflow: auto;
+      padding-top:5px;
+      padding-bottom:5px;
     }
 
     .todo-list {
