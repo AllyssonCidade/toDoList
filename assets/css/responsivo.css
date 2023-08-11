@@ -39,6 +39,8 @@
     .task {
       gap: 5px;
       padding: 0;
+      padding-top:5px;
+      padding-bottom:5px;
       padding-right: 3px;
       font-size: .9rem;
       overflow: auto;
