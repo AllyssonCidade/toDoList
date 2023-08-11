@@ -184,9 +184,11 @@ body {
   background-color: rgba(201, 201, 201, 0.486);
   width: 10px;
   border-radius: 10px;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(107, 107, 107, 0.466);
   border-radius: 10px;
+  display: none;
 }
