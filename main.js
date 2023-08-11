@@ -32,7 +32,7 @@ const criarTarefa = (evento) => {
 };
 
 const carregarTarefasSalvas = () => {
-    const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas'));
+    const tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
     const lista = document.querySelector('[data-list]');
 
     tarefasSalvas.forEach(tarefaSalva => {
